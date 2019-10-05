@@ -1,0 +1,27 @@
+.wizard {
+  z-index: 10;
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -50%);
+  max-height: 75%;
+  max-width: 50%;
+  overflow-y: auto;
+  background-color: white;
+}
+
+.wizard_body {
+  background-color: white;
+}
+
+.wizard_table, table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+.wizard_table, th, td {
+  padding: 5px;
+}
+
+.wizard_table, th {
+  text-align: left;
+}

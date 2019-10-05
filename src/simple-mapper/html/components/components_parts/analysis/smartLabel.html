@@ -1,0 +1,19 @@
+<script id="smartLabel_template" type="text/x-handlebars-template">
+  <div>
+    <h4>Count: {{count}}</h4>
+    <table>
+      <tr>
+        {{#each header}}
+        <td>{{@key}}</td>
+        {{/each}}
+      </tr>
+      {{#each arrayVal}}
+      <tr>
+        {{#each obj}}
+        <td class = "legend_table">{{this}}</td>
+        {{/each}}
+      </tr>
+      {{/each}}
+    </table>
+  </div>
+</script>

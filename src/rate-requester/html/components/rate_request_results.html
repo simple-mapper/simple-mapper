@@ -1,0 +1,78 @@
+<script id="rate_request_results_template" type="text/x-handlebars-template">
+
+  <h3>Results: <span style = "color: #808080">{{Origin.city}}, {{Origin.state}}-{{Origin.zip}} - {{Dest.city}}, {{Dest.state}}-{{Dest.zip}}</span></h3>
+
+  <div class="pure-g">
+    <div class="pure-u-12-24">
+
+      <table class="pure-table" style = "font-size: 14px;">
+
+        <tbody>
+          <tr>
+            <td>Distance</td>
+            <td>{{distance_avg}}</td>
+          </tr>
+
+          <tr>
+            <td>Avg $</td>
+            <td>${{overall}}</td>
+          </tr>
+
+          <tr>
+            <td>Avg LH</td>
+            <td>${{avg}}</td>
+          </tr>
+
+          <tr>
+            <td>Est Fuel</td>
+            <td>${{est_fuel}}</td>
+          </tr>
+
+          <tr>
+            <td>LH Total</td>
+            <td>${{total}}</td>
+          </tr>
+
+          <tr>
+            <td>Count</td>
+            <td>{{count}}</td>
+          </tr>
+
+          <tr>
+            <td>$/Mile</td>
+            <td>${{cost_per_mile}}</td>
+          </tr>
+
+        </tbody>
+      </table>
+    </div>
+
+    <div class="pure-u-12-24">
+      <table class="pure-table" style = "font-size: 10px;">
+
+        <tbody>
+
+          <thead>
+            <tr>
+              <th>SCAC</th>
+              <th>Avg LH</th>
+              <th>Count</th>
+              <th>$/Mile</th>
+            </tr>
+          </thead>
+          {{#each carriers}}
+          <tr>
+            <td class = "results_carriers" id = "results__{{key}}">{{key}}</td>
+            <td>${{avg}}</td>
+            <td>{{count}}</td>
+            <td>${{cost_per_mile}}</td>
+          </tr>
+          {{/each}}
+        </tbody>
+      </table>
+      <p class = "paging_recommendations" id = "rate_info">Rates</p>
+    </div>
+  </div>
+
+
+</script>

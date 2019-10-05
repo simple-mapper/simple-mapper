@@ -1,0 +1,69 @@
+<script id="analysis_template" type="text/x-handlebars-template">
+  <button style = "font-size: 70%; float: right;" id = "analysis__exit">Exit</button>
+  <div>
+    <h2 class = "analysis-header">Analysis</h2>
+    <!--<hr>
+    <div class = "grid-container" style = "margin-left: 1em; margin-right: 1em;">
+      <div class = "grid-div">
+        <h1>TBD - Under Development</h1>
+      </div>
+      <div class = "grid-div">
+
+      </div>
+    </div> -->
+    <hr>
+    <div class = "grid-container" style = "margin-left: 1em; margin-right: 1em;">
+      <div class = "grid-div">
+        <h3>Point Size Gradient</h3>
+        <legend class = "analysis_legend">Select Column</legend>
+        <select id = "gradient_column">
+          <option value="null">N/A</option>
+          {{#each header}}
+          {{#if number}}
+          <option value="{{@index}}" {{#ifEqualsNum ../gradient_column @index}}selected{{/ifEqualsNum}}>{{name}} {{gradient_column}}</option>
+          {{/if}}
+          {{/each}}
+        </select>
+        <br>
+        <br>
+        <button class = "analysis__apply" id = "gradient_column__apply">Apply</button>
+        <button id = "analysis__updateMap">Update</button>
+      </div>
+      <div class = "grid-div">
+
+        <div style = "margin-left: 2em; margin-top: 1.5em;">
+          <div style="background-color: {{gradient_x_small_color}};" class="analysis-circle-sm"></div>
+          <div style="background-color: {{gradient_small_color}};  margin-left: 2.1em;" class="analysis-circle-md"></div>
+          <div style="background-color: {{gradient_medium_color}}; margin-left: 1.2em;" class="analysis-circle-lg"></div>
+          <div style="background-color: {{gradient_large_color}};  margin-left: 0.8em;" class="analysis-circle-xlg"></div>
+        </div>
+        <br>
+
+        <table>
+          <tr>
+            <th>X-Small</th>
+            <th>Small</th>
+            <th>Medium</th>
+            <th>High</th>
+          </tr>
+          <tr>
+            <td><input type="color" value="{{gradient_x_small_color}}" id = "gradient_x_small_color"></td>
+            <td><input type="color" value="{{gradient_small_color}}" id = "gradient_small_color"></td>
+            <td><input type="color" value="{{gradient_medium_color}}" id = "gradient_medium_color"></td>
+            <td><input type="color" value="{{gradient_large_color}}" id = "gradient_large_color"></td>
+          </tr>
+          <tr>
+            <td><button class = "analysis__apply" id = "gradient_x_small_color__apply">Apply</button></td>
+            <td><button class = "analysis__apply" id = "gradient_small_color__apply">Apply</button></td>
+            <td><button class = "analysis__apply" id = "gradient_medium_color__apply">Apply</button></td>
+            <td><button class = "analysis__apply" id = "gradient_large_color__apply">Apply</button></td>
+          </tr>
+        </table>
+
+        <!--<label for="gradient">Gradient</label>
+          <input type="number" class = "analysis-number-input"></input> -->
+        </div>
+      </div>
+    </div>
+    <hr>
+  </script>

@@ -1,0 +1,48 @@
+//To Do
+
+//https://nationalmap.gov/small_scale/atlasftp.html#citiesx
+//https://www.naturalearthdata.com/downloads/10m-cultural-vectors/roads/
+geonames
+
+1) Filters - Categories based (Want to try to JavaScript map reduce)
+2) Global Filters
+3) Display Order
+4) Line Controls
+6) Legend Display
+5) More Styles and Functionality for the points and Line
+-Weighted Sizing
+-No Fill
+-Other Shapes
+
+Structure:
+* Smaller Tasks
+& Comments to Roadmap items
+
+Road map 2019-04-28
+-Smaller Tasks
+*Need to be able to show text
+*Need to be able to global unshow source and destinations
+*Proximity analysis
+*try using vector maps. could be free
+*Need to add source or destination global hide
+*Need to implement a smart display option
+*default to global hide if over input limit
+*need to be able to draw distance circles
+1) Legend - make an api to be called from filters
+2) Display Point Order - Move down the priority a bit
+2) Export Feature
+3) Line Controls - Did some basic show and unshow stuff, look to expand in a bit
+4) More Styles
+5) Sizing options based on spend, etc
+6) Import Wizarded - Prepare for Flex Model to eventually allow for multiple files
+& Allow the function to define what points are latitude and longitude
+7) Map Hosting
+8) Documentation
+9) API for Zip Codes to Latitudes
+& Likely set up a free API on IBM then have a connection to a cloudant with a defined access for only that site and API key
+10) API for Routes
+& Likely just do a hack where I save the requests from routing api to cloudant
+
+Extras:
+Drag and Drop legend
+Line heat map of lines with color determined by price of a scale

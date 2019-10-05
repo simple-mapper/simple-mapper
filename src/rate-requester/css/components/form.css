@@ -1,0 +1,36 @@
+.form {
+  border-radius: 20px;
+  overflow: hidden;
+  margin-right: 1em;
+  height: 100%;
+  background-color: white;
+}
+
+.form2 {
+  border-radius: 20px;
+  overflow: hidden;
+  height: 100%;
+  background-color: white;
+}
+
+.recommendation_lanes{
+  cursor: default;
+}
+
+.results_carriers {
+  cursor: default;
+}
+
+.results_carriers {
+  cursor: default;
+}
+
+.paging_recommendations {
+  text-decoration: underline;
+  color: grey;
+  cursor: default;
+}
+
+.paging_recommendations:hover {
+  color: blue;
+}

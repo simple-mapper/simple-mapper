@@ -1,0 +1,50 @@
+<script id="recommendations_template" type="text/x-handlebars-template">
+
+  <h3>Recommendations:</h3>
+
+  <p>Page: {{params.zipIndex.page}} <span class = "paging_recommendations" id = "recommendation_page_up">Up</span>   <span class = 'paging_recommendations' id = 'recommendation_page_zero'>Home</span> <span class = "paging_recommendations" id = "recommendation_page_down">Down</span></p>
+
+  <table class="pure-table" style = "font-size: 10px; margin-top: 2em;">
+    <tbody>
+      <thead>
+        <tr>
+          <th>Rank</th>
+          <th>Lane</th>
+          <th>Display</th>
+          <th>Mode</th>
+          <th>Net Distance</th>
+          <th>Distance</th>
+          <th>Count</th>
+          <th>LH Total</th>
+          <th>Avg LH</th>
+          <th>$/Mile</th>
+          <th>Actuals</th>
+        </tr>
+      </thead>
+      {{#each params}}
+      <tr>
+        <td>{{tempLane.index}}</td>
+        <td class = "recommendation_lanes paging_recommendations" id = "recommendations__{{tempLane.OrigRef}}__{{tempLane.DestRef}}__{{tempLane.obj.params.Mode}}">{{tempLane.Orig.city}}, {{tempLane.Orig.state}}-{{tempLane.OrigRef}} - {{tempLane.Dest.city}}, {{tempLane.Dest.state}}-{{tempLane.DestRef}}</td>
+        {{#if tempLane.check}}
+        <td><center><input class ="recommendations_input_display" type="checkbox" value="display" id = "recommendationsVal__{{tempLane.OrigRef}}__{{tempLane.DestRef}}__{{tempLane.obj.params.Mode}}__{{tempLane.index}}" checked></input></center></td>
+        {{else}}
+        <td><center><input class ="recommendations_input_display" type="checkbox" value="display" id = "recommendationsVal__{{tempLane.OrigRef}}__{{tempLane.DestRef}}__{{tempLane.obj.params.Mode}}__{{tempLane.index}}"></input></center></td>
+        {{/if}}
+        <td>{{tempLane.obj.params.Mode}}</td>
+        <td>{{net_distance.net}}</td>
+        <td>{{tempLane.aggregate.distance_avg}}</td>
+        <td>{{tempLane.aggregate.count}}</td>
+        <td>${{tempLane.aggregate.total}}</td>
+        <td>${{tempLane.aggregate.avg}}</td>
+        <td>${{tempLane.aggregate.cost_per_mile}}</td>
+        <td>
+          {{#each tempLane.aggregate.carriers}}
+          {{key}}-${{avg}}-{{count}},
+          {{/each}}
+        </td>
+      </tr>
+      {{/each}}
+    </tbody>
+
+  </table>
+</script>

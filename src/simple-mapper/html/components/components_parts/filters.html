@@ -1,0 +1,21 @@
+<script id="filters_template" type="text/x-handlebars-template">
+  <div class = "_container">
+    <div id = "toolbar_controls"></div>
+    <div style = "width: 52em;">
+      <h3>About: </h5>
+        <p>The way the filter works is the list of source, destination, and line points are passed
+          to the filterScript function to allow for custom filters using standard javascript. This gives access to all the
+          style options of the points as well, which offers powerful flexiblity.</p>
+          <p>Use filters.log() instead of console.log() to debug on the page.</p>
+          <p>Begins with --> function filterScript(lines, source_points, dest_points){</p>
+            <textarea id = "textArea" class = "filterArea">
+            </textarea>
+            <p>Ends with -->  return [lines, source_points, dest_points]; }</p>
+            <br>
+            <button id = "saveFilter">Save Filter</button>
+            <button id = "testFilter">Test Filter</button>
+            <button id = "clearLog">Clear Log</button>
+            <p id = "filterConsole"></p>
+          </div>
+        </div>
+      </script>

@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-148963888-1"></script>
+  <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-148963888-1');
+</script>
+
+<meta charset="UTF-8">
+<meta name="description" content="Simple mapper aims to create highly customizable and detailed maps to better understand geographical networks.
+The unique filtering model allows for custom logic using native JavaScript for the filtering of the data. This model differs from most other similar
+resources but provides an ability to develop business logic on your data much like SQL would.">
+<meta name="keywords" content="Mapping, Visualizations, Business Logic">
+
+<link rel="shortcut icon" type="image/x-icon" href="1200px-Sonoco.svg.png" />
+<link rel="stylesheet" href="simple-mapper/css/vendor/ol.css" type="text/css">
+<link rel="stylesheet" href="simple-mapper/css/vendor/codemirror.css">
+<link rel="stylesheet" href="simple-mapper/css/vendor/pure-min.css">
+<link rel="stylesheet" href="simple-mapper/css/vendor/pure-min-grid.css">
+<link rel="stylesheet" href="simple-mapper/css/pages/index.css" type="text/css">
+<link rel="stylesheet" href="simple-mapper/css/components/toolbar.css" type="text/css">
+<link rel="stylesheet" href="simple-mapper/css/components/filter.css" type="text/css">
+<link rel="stylesheet" href="simple-mapper/css/components/legend.css" type="text/css">
+<link rel="stylesheet" href="simple-mapper/css/components/wizard.css" type="text/css">
+<link rel="stylesheet" href="simple-mapper/css/components/analysis.css" type="text/css">
+<link rel="stylesheet" href="simple-mapper/css/components/ol-popup.css" type="text/css">
+
+<link rel="stylesheet" href="rate-requester/css/components/form.css" type="text/css">
+
+<script src="simple-mapper/js/vendor/ol.js"></script>
+<script src="simple-mapper/js/vendor/olms.js"></script>
+<title>Simple-Mapper</title>
+</head>
+<body style= "background-color: #D0D0D0;">
+
+  <div id = "main"></div>
+
+  <!-- <script>if (typeof module === 'object') {window.module = module; module = undefined;}</script> -->
+
+  <!--***Simple-Mapper-->
+
+  <!--Global-->
+  <script src="./main/config/global_var.js"></script>
+
+
+  <!--Vendor-->
+  <script src="simple-mapper/js/vendor/navigo.min.js"></script>
+  <script src="simple-mapper/js/vendor/handlebars.min.js"></script>
+  <script src="simple-mapper/js/vendor/papaparse.min.js"></script>
+  <script src="simple-mapper/js/vendor/codemirror.js"></script>
+  <script src="simple-mapper/js/vendor/FileSaver.min.js"></script>
+  <script src="simple-mapper/js/vendor/jquery-3.3.1.min.js"></script>
+  <script src="simple-mapper/js/vendor/sammy-latest.min.js"></script>
+  <script src="simple-mapper/js/vendor/hello.all.js"></script>
+  <script src="simple-mapper/js/vendor/shp.js"></script>
+
+  <!--Need to be able to inject-->
+  <script src="simple-mapper/js/vendor/excel.js"></script>
+
+  <!--Vendor Scripts-->
+  <!-- <script src="js/vendor/scripts/google.js"></script> -->
+
+  <!--Components-->
+  <script src="simple-mapper/js/components/map.js"></script>
+  <script src="simple-mapper/js/components/toolbar.js"></script>
+  <script src="simple-mapper/js/components/legend.js"></script>
+  <script src="simple-mapper/js/components/wizard.js"></script>
+  <script src="simple-mapper/js/components/analysis.js"></script>
+
+  <!--Components Parts-->
+  <script src="simple-mapper/js/components/components_parts/upload.js"></script>
+  <script src="simple-mapper/js/components/components_parts/upload_utils.js"></script>
+  <script src="simple-mapper/js/components/components_parts/export.js"></script>
+  <script src="simple-mapper/js/components/components_parts/filters_model.js"></script>
+  <script src="simple-mapper/js/components/components_parts/filters.js"></script>
+  <script src="simple-mapper/js/components/components_parts/toolbar_controls.js"></script>
+  <script src="simple-mapper/js/components/components_parts/wizard_table.js"></script>
+  <script src="simple-mapper/js/components/components_parts/wizard_model.js"></script>
+  <script src="simple-mapper/js/components/components_parts/map_utils.js"></script>
+  <script src="simple-mapper/js/components/components_parts/text_options.js"></script>
+  <script src="simple-mapper/js/components/components_parts/plugins.js"></script>
+
+  <!--Analysis Components Parts-->
+  <script src="simple-mapper/js/components/components_parts/analysis/label_utils.js"></script>
+  <script src="simple-mapper/js/components/components_parts/analysis/analysis_model.js"></script>
+  <script src="simple-mapper/js/components/components_parts/analysis/analysis_utils.js"></script>
+
+  <!--Component Styles-->
+  <script src="simple-mapper/js/components/styles/point_styles.js"></script>
+  <script src="simple-mapper/js/components/styles/point_style_model.js"></script>
+  <script src="simple-mapper/js/components/styles/shapes.js"></script>
+  <script src="simple-mapper/js/components/styles/mapStyles.js"></script>
+  <script src="simple-mapper/js/components/styles/map_colors.js"></script>
+
+  <!--Controls-->
+  <script src="simple-mapper/js/controls/router.js"></script>
+  <script src="simple-mapper/js/controls/render.js"></script>
+
+  <!--Api-->
+  <script src="simple-mapper/js/api/simple-api.js"></script>
+
+  <!--Plugins Office365-->
+  <script src="simple-mapper/js/plugins/office365-plugin/js/controls/office365_error.js"></script>
+  <script src="simple-mapper/js/plugins/office365-plugin/js/office365.js"></script>
+  <script src="simple-mapper/js/plugins/office365-plugin/js/components/office365_api.js"></script>
+  <script src="simple-mapper/js/plugins/office365-plugin/js/components/office365_config.js"></script>
+  <script src="simple-mapper/js/plugins/office365-plugin/js/components/office365_utils.js"></script>
+  <script src="simple-mapper/js/plugins/office365-plugin/js/controls/office365_render.js"></script>
+
+  <!--Plugins Scheduler-->
+  <script src="simple-mapper/js/plugins/scheduler/js/controls/scheduler_render.js"></script>
+  <script src="simple-mapper/js/plugins/scheduler/js/controls/scheduler_error.js"></script>
+  <script src="simple-mapper/js/plugins/scheduler/js/components/scheduler_utils.js"></script>
+  <script src="simple-mapper/js/plugins/scheduler/js/scheduler.js"></script>
+
+  <!--Plugins Components Parts-->
+  <script src="simple-mapper/js/components/components_parts/plugins/plugins_controls.js"></script>
+  <script src="simple-mapper/js/components/components_parts/plugins/plugins_model.js"></script>
+
+  <!-- <script>if (window.module) module = window.module;</script> -->
+
+  <!--***main-->
+  <script src="./main/simple-mapper.js"></script>
+  <script src="./main/main.js"></script>
+
+  <!--Config-->
+  <script src="./main/config/config.js"></script>
+
+</body>
+</html>

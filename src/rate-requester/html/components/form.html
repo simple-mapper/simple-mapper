@@ -1,0 +1,43 @@
+<script id="form_template" type="text/x-handlebars-template">
+  <div class="pure-g">
+    <div class="pure-u-1">
+      <form class="pure-form pure-form-stacked _container" id = "rate_request_form">
+        <fieldset>
+          <legend>Lane Info</legend>
+
+          <div class="pure-g">
+            <div class="pure-u-12-24 pure-u-xl-1">
+
+              <label for="source_zipcode">Source Zipcode</label>
+              <input id="text" type="text" placeholder="" id = "rate_request_sourceZip">
+              <span class="pure-form-message">This is a required field.</span>
+
+              <label for="dest_zipcode">Destination Zipcode</label>
+              <input id="text" type="text" placeholder="" id = "rate_request_destZip">
+              <span class="pure-form-message">This is a required field.</span>
+
+              <label for="mode">Mode</label>
+              <select id="rate_request_mode">
+                <option value = "TL">Truckload (TL)</option>
+                <option value = "INTRMDL">Intermodal (INTRMDL)</option>
+              </select>
+              <span class="pure-form-message">&nbsp;</span>
+            </div>
+            <div class="pure-u-12-24 pure-u-xl-1">
+
+              <label for="mode">From Date</label>
+              <input type="date" name="fromDate">
+              <span class="pure-form-message">&nbsp;</span>
+
+              <label for="mode">To Date</label>
+              <input type="date" name="toDate">
+              <span class="pure-form-message">&nbsp;</span>
+            </div>
+          </div>
+
+          <button type="submit" class="pure-button pure-button-primary">Submit</button>
+        </fieldset>
+      </form>
+    </div>
+  </div>
+</script>

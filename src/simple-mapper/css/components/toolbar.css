@@ -1,0 +1,43 @@
+.toolbar {
+  margin-top: 2em;
+  z-index: 10;
+  position: absolute;
+  top: 6em;
+  left: 2em;
+  max-height: 80%;
+  overflow-y: auto;
+}
+
+.hover_cursor {
+  cursor: pointer;
+}
+
+.toolbar_body {
+  background-color: white;
+  padding-bottom: 1em;
+}
+
+.toolbar_header {
+  padding-top: 0.5em;
+  margin-left: 1em;
+}
+
+.hr-pad {
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+.grid-container {
+  display: grid;
+  grid: auto auto;
+  grid-gap: 2px;
+}
+
+.grid-div {
+  grid-row: 1 / span 2;
+  /* border-right:1px solid #000; */
+}
+
+.toolbar_legend {
+  font-size: 110%;
+}

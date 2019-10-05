@@ -1,0 +1,30 @@
+<script id="rate_viewer_main_template" type="text/x-handlebars-template">
+  <h3 style = "margin-left: 1em;">Rates:</h3>
+
+  <table class="pure-table" style = "font-size: 14px; margin-top: 2em; margin-left: 1em;">
+    <tbody>
+      <thead>
+        <tr>
+          <th>Index</th>
+          <th>Rate Offering</th>
+          <th>Rate Geo</th>
+          <th>Expected Cost</th>
+          <th>Weighted Cost</th>
+          <th>Charge Type</th>
+        </tr>
+      </thead>
+      {{#each obj.docs.data}}
+      <tr>
+        <td>{{index}}</td>
+        <td>{{[Rate Offering]}}</td>
+        <td>{{[Rate Geo]}}</td>
+        <td>${{expectedCostVal}}</td>
+        <td>${{weightedCostVal}}</td>
+        <td>{{[Charge Multiplier]}}</td>
+      </tr>
+      {{/each}}
+    </tbody>
+
+  </table>
+
+</script>
