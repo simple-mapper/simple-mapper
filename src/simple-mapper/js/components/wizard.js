@@ -175,7 +175,7 @@ var wizard = {
     for(var i = 1; i < upload.data.values.length; i++){
       lookVal = wizard.zipCountry(upload.data.values[i][column]);
 
-      if(zips[lookVal] != undefined){
+      if(zips[lookVal] != undefined && zips[lookVal].docs[0] != undefined && zips[lookVal].docs[0].ok != undefined){
         latVal = zips[lookVal].docs[0].ok.latitude;
         lngVal = zips[lookVal].docs[0].ok.longitude;
         upload.data.values[i].push(latVal);
