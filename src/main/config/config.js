@@ -1,7 +1,17 @@
 var __dirname = '/'
 
 window.onload = function() {
-  simple_mapper.gen();
+
+  const urlParams = new URLSearchParams(window.location.search);
+  const myParams = urlParams.get('about');
+
+  if(!myParams){
+    simple_mapper.gen();
+  }
+  else {
+    about.gen();
+  }
+
 };
 
 Handlebars.registerHelper('ifEquals', function(arg1, arg2, options) {

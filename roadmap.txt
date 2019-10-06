@@ -3,3 +3,12 @@ pop up to view details more fully, Have trend data?? Another Shipment Data.
 trend data part of the simple mapper obj
 
 Then have the online viewer with out office 365 plug in
+
+Sections
+1) About
+2) Roadmap
+3) Technologies
+
+Future
+1) Free API
+2) Tutorials
