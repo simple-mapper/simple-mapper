@@ -35,10 +35,21 @@ var about = {
     <li class="pure-menu-item"><a href="#about_home" class="pure-menu-link">About</a></li>
     <li class="pure-menu-item"><a href="#" class="pure-menu-link">Roadmap</a></li>
     <li class="pure-menu-item"><a href="#" class="pure-menu-link">Links</a></li>
+    <li class="pure-menu-item"><a href="#" class="pure-menu-link">Getting Started</a></li>
     </ul>
     </div>
     </div>
     <div class = "about" id = "about_home"></div>
+    <div class="pure-g">
+    <div class="pure-u-1-1 pure-u-lg-19-24">
+    
+    </div>
+    <div class="pure-u-1-1 pure-u-lg-5-24">
+    <div class = "about_container_cloud">
+    <div class = "fancy"></div>
+    </div>
+    </div>
+    </div>
     </script>
     `
 
