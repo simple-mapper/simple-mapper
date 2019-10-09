@@ -27,6 +27,7 @@ var about_home = {
 
     var text = `
     <script id="about_home_template" type="text/x-handlebars-template">
+    <div class = "about">
     <div class = "about_container">
     <div class="pure-g">
     <div class="pure-u-1-1 pure-u-lg-1-2">
@@ -39,6 +40,16 @@ var about_home = {
     <div class="pure-u-1-1 pure-u-lg-1-2">
     <img class = "about_img" src="./about/media/example_screenshot.png" alt="Simple-Mapper" height="auto" width="100%">
     </div>
+    </div>
+    </div>
+    </div>
+    <div class="pure-g">
+    <div class="pure-u-1-1 pure-u-lg-19-24">
+
+    </div>
+    <div class="pure-u-1-1 pure-u-lg-5-24">
+    <div class = "about_container_cloud">
+    <div class = "fancy"></div>
     </div>
     </div>
     </script>
