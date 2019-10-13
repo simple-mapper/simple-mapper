@@ -22,6 +22,12 @@ var about = {
 
   post_render: function(){
     about_home.gen();
+
+    document.getElementById("header_simple_mapper").addEventListener('click', () => {
+      simple_mapper.gen();
+      upload.confirmUploadData('non-skip');
+    });
+
   },
 
   template: function(){
@@ -31,14 +37,16 @@ var about = {
     <div class = "about_header">
     <div class="pure-menu pure-menu-horizontal">
     <ul class="pure-menu-list">
-    <li class="pure-menu-item  pure-menu-selected"><a href="#" class="pure-menu-link">Simple-Mapper</a></li>
-    <li class="pure-menu-item"><a href="#about_home" class="pure-menu-link"><u>About</u></a></li>
+    <li class="pure-menu-item  pure-menu-selected"><a href="/" class="pure-menu-link" id = "header_simple_mapper">Simple-Mapper v0.01</a></li>
+    <li class="pure-menu-item"><a href="#about_home" class="pure-menu-link">About</a></li>
     <li class="pure-menu-item"><a href="#" class="pure-menu-link">Roadmap</a></li>
     <li class="pure-menu-item"><a href="#" class="pure-menu-link">Getting Started</a></li>
     </ul>
     </div>
     </div>
+    <div class = "about break">
     <div id = "about_home"></div>
+    </div>
     </script>
     `
 

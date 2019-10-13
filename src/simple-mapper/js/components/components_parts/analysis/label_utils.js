@@ -3,7 +3,6 @@ var label_utils = {
   objIndex: {},
 
   gen: function(){
-    //render.smartLabel();
 
     var text = `
     <script id="smartLabel_template" type="text/x-handlebars-template">

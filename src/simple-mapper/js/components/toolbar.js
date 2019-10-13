@@ -29,6 +29,7 @@ var toolbar = {
     document.getElementById("toolbar_upload").addEventListener('click', upload.gen, false);
     document.getElementById("toolbar_filters").addEventListener('click', filters.gen, false);
     document.getElementById("toolbar_plugins").addEventListener('click', plugins.gen, false);
+    document.getElementById("toolbar_about").addEventListener('click', about.gen, false);
   },
 
   setHide: function(){

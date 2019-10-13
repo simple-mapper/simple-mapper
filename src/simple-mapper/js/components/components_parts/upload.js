@@ -67,8 +67,6 @@ var upload = {
 requestGen: function(data, type){
   upload.data = {values: data};
 
-  console.log(upload.data);
-
   if(type != "skip"){
     point_styles_model.fun.clear();
     legend.show = false;

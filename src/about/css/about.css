@@ -8,20 +8,33 @@
   overflow: hidden;
 }
 
-.about_header {
-  margin-top: 0.5em;
+.about_second {
   margin-right: 1em;
   margin-left: 1em;
   padding: 0;
+  background-color: white;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.about_header {
+  margin-top: 0.5em;
+  margin-right: 1em;
+  padding: 0;
+  margin-left: 1em;
   font-size: 1.5em;
   background-color: white;
   border-radius: 20px;
   display: inline-block;
 }
 
+.header_holder {
+  margin-top: 69px;
+}
+
 .about_container {
-  margin-left: 2em;
-  margin-right: 2em;
+  margin-left: 1em;
+  margin-right: 1em;
 }
 
 .about_container_cloud {
@@ -36,8 +49,6 @@
 
 .about_img {
   margin-top: 0.5em;
-  margin-right: 1em;
-  margin-left: 1em;
   margin-bottom: 0.5em;
   padding: 0;
   background-color: white;
@@ -45,76 +56,19 @@
   overflow: hidden;
 }
 
-.fancy {
-  text-align: center;
-
-  /* Same trick as previsouly used to make circles */
-  box-sizing: border-box;
-  width     : 150px;
-  height    : 150px;
-  padding   : 80px 1em 0 1em;
-
-  /* We make room for the "ears" of our cloud */
-  margin    : 0 100px;
-
-  position: relative;
-
-  background-color: white;
-
-  /* Well, actually we are not making a full circle
-  as we want the bottom of our cloud to be flat.
-  Feel free to tweak this example to make a cloud
-  that isn't flat at the bottom ;) */
-  border-radius: 100% 100% 0 0;
+.about_roadmap {
+  /* text-align: center; */
+  font-style: italic;
 }
 
-/* Those are common style that apply to both our ::before
-and ::after pseudo elements. */
-.fancy::before,
-.fancy::after {
-  /* This is required to be allowed to display the
-  pseudo-elements, event if the value is an empty
-  string */
-  content: '';
-
-  /* We positionnate our pseudo-elements on the left and
-  right sides of the box, but always at the bottom */
-  position: absolute;
-  bottom  : 0;
-
-  /* This makes sure our pseudo-elements will be below
-  the box content whatever happens. */
-  z-index : -1;
-
-  background-color: white;
-  border-radius: 100%;
+.break {
+  margin-bottom: 1em;
 }
 
-.fancy::before {
-  /* This is the  size of the clouds left ear */
-  width  : 125px;
-  height : 125px;
-
-  /* We sligthly move it to the left */
-  left    : -80px;
-
-  /* To make sure that the bottom of the cloud
-  remains flat, we must make the bottom right
-  corner of the left ear square. */
-  border-bottom-right-radius: 0;
+.about_section {
+  margin-bottom: 2em;
 }
 
-.fancy::after {
-  /* This is the size of the clouds left ear */
-  width  : 100px;
-  height : 100px;
-
-  /* We sligthly move it to the right */
-  right   : -60px;
-
-
-  /* To make sure that the bottom of the cloud
-  remains flat, we must make the bottom left
-  corner of the right ear square. */
-  border-bottom-left-radius: 0;
+.about_list {
+  font-size: 1.5em;
 }
