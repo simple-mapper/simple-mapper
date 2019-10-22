@@ -3,13 +3,13 @@ var __dirname = '/'
 window.onload = function() {
 
   const urlParams = new URLSearchParams(window.location.search);
-  const myParams = urlParams.get('about');
+  const myParams = urlParams.get('simple');
 
   if(!myParams){
-    simple_mapper.gen();
+    about.gen();
   }
   else {
-    about.gen();
+    simple_mapper.gen();
   }
 
 };
