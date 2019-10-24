@@ -1,3 +1,0 @@
-var filters_model = {
-  
-}

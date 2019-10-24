@@ -1,0 +1,1 @@
+watchify simple-mapper.js -o bundle.js

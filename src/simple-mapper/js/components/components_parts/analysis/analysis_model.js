@@ -11,3 +11,5 @@ var analysis_model = {
     gradient_large_size: 30,
   }
 }
+
+window.analysis_model = analysis_model;

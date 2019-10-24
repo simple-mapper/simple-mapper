@@ -289,3 +289,5 @@ var scheduler_utils = {
     }
   }
 }
+
+window.scheduler_utils = scheduler_utils;

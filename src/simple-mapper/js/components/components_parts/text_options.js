@@ -1,9 +1,37 @@
 var text_options = {
   gen: function(){
-    render.text_options();
+    text_options.init();
   },
 
-  init: function(text){
+  init: function(){
+
+    var text = `<script id="text_options_template" type="text/x-handlebars-template">
+    <button style = "font-size: 70%; float: right;" id = "text__options__close">Close</button>
+    <div class = "grid-container">
+    <div class = "grid-div">
+    <legend>Label Text</legend>
+    <select id = "text__options__label">
+    <option value="{{null}}">N/A</option>
+    {{#each header}}
+    <option value="{{@index}}" {{#ifEquals ../TXT @index}}selected{{/ifEquals}}>{{name}}</option>
+    {{/each}}
+    </select>
+    </div>
+    <div class = "grid-div">
+    <legend>Font Size</legend>
+    <input type="number" value ="{{font_size}}" id = "text__options__font__size"></input>
+    </div>
+    </div>
+    <br>
+    <label>Smart Label</label>
+    <input type="radio" id="text__options__smartLabels" {{#if smartLabel}}checked{{/if}}></input>
+    <button id = "text__options__smartLabelsSet">Remove</button>
+    <button style = "font-size: 70%; float: right;" id = "text__options__apply">Apply Font</button>
+    <br>
+    <br>
+    </script>
+    `
+
     text_options.render(text);
   },
 
@@ -39,3 +67,5 @@ var text_options = {
   }
 
 }
+
+window.text_options = text_options;

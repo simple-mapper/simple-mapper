@@ -1,9 +1,93 @@
 var wizard = {
   gen: function(){
-    render.wizard();
+    wizard.init();
   },
 
-  init: function(text){
+  init: function(){
+
+    var text = `<script id="wizard_template" type="text/x-handlebars-template">
+    <div class = "wizard_body simple_round">
+    <table style="width:100%" class = "wizard_table">
+    <tr>
+    {{#each header}}
+    <th class = "wizard_table wizard_headers" id="{{@index}}__{{name}}__wizard__header"><a href="#">{{name}}</a></th>
+    {{/each}}
+    </tr>
+    {{#each shortValues}}
+    <tr>
+    {{#each val}}
+    <td class = "wizard_table">{{this}}</td>
+    {{/each}}
+    </tr>
+    {{/each}}
+    </table>
+    <hr>
+    <div class = "grid-container" style = "margin-left: 1em; margin-right: 1em;">
+    <div class = "grid-div" style="border-right:1px solid #000; margin-bottom: 2em;">
+    <h4>Select Columns</h4>
+    <legend>Source Latitude</legend>
+    <select class = "wizard_select" id = "source__latitude__wizard">
+    <option value="{{null}}">N/A</option>
+    {{#each header}}
+    <option value="{{@index}}" {{#ifEquals ../SLat @index}}selected{{/ifEquals}}>{{name}}</option>
+    {{/each}}
+    </select>
+    <br>
+    <br>
+    <legend>Source Longitude</legend>
+    <select class = "wizard_select" id = "source__longitube__wizard">
+    <option value="{{null}}">N/A</option>
+    {{#each header}}
+    <option value="{{@index}}" {{#ifEquals ../SLng @index}}selected{{/ifEquals}}>{{name}}</option>
+    {{/each}}
+    </select>
+    <br>
+    <br>
+    <legend>Destination Latitude</legend>
+    <select class = "wizard_select" id = "destination__latitude__wizard">
+    <option value="{{null}}">N/A</option>
+    {{#each header}}
+    <option value="{{@index}}" {{#ifEquals ../DLat @index}}selected{{/ifEquals}}>{{name}}</option>
+    {{/each}}
+    </select>
+    <br>
+    <br>
+    <legend>Destination Longitude</legend>
+    <select class = "wizard_select" id = "destination__longitude__wizard">
+    <option value="{{null}}">N/A</option>
+    {{#each header}}
+    <option value="{{@index}}" {{#ifEquals ../DLng @index}}selected{{/ifEquals}}>{{name}}</option>
+    {{/each}}
+    </select>
+    <br>
+    <br>
+    <legend>Catagory</legend>
+    <select class = "wizard_select" id = "catagory__wizard">
+    <option value="{{null}}">N/A</option>
+    {{#each header}}
+    <option value="{{@index}}" {{#ifEquals ../CAT @index}}selected{{/ifEquals}}>{{name}}</option>
+    {{/each}}
+    </select>
+    <br>
+    <br>
+    <button id = "apply__wizard">Apply</button>
+    <button id = "text__options__wizard">Text Options</button>
+    </div>
+    <div class = "grid-div" style = "margin-left: 1em">
+    <h4>Selected Columns</h4>
+    <div id = "wizard_table"></div>
+    <br>
+    <button id = "apply__confirm__wizard">Confirm</button>
+    <button id = "apply__default__wizard">Use Defaults</button>
+    <button id = "exit__wizard">Exit</button>
+    <p>Defaults: SLat=C0,SLng=C1,DLat=C2,DLng=C3,CAT=C4,TXT=C</p>
+    <hr>
+    <div id = "text_options"></div>
+    </div>
+    </div>
+    </div>
+    </script>`
+
     wizard.render(text);
   },
 
@@ -13,7 +97,6 @@ var wizard = {
     var template = document.getElementById("wizard_template").innerHTML;
     var compiledTemplate = Handlebars.compile(template);
     upload_utils.wizardData();
-    //console.log(upload.data);
     var html = compiledTemplate(upload.data);
     document.getElementById("wizard").innerHTML = html;
 
@@ -68,7 +151,6 @@ var wizard = {
     }
 
     wizard_model.selectColumns = selectedVals;
-    //console.log(selectedVals);
 
     wizard_table.gen();
 
@@ -86,7 +168,6 @@ var wizard = {
       font_size: 30,
       smartLabel: true,
     };
-    //console.log(wizard_model);
 
     wizard.setWizardModelConfirm();
   },
@@ -131,7 +212,7 @@ var wizard = {
 
     var google_id_token = "";
 
-    simple_api.simple_zipcodes(google_id_token, zips, column);
+    //simple_api.simple_zipcodes(google_id_token, zips, column);
 
   },
 
@@ -153,7 +234,6 @@ var wizard = {
     var zips = {};
     var keyVal = "";
     for(var i = 0; i < zipData.results.length; i++){
-      //console.log(zipData.rows[i]);
 
       keyVal = zipData.results[i].id;
       if(zipData.results[i].error == undefined){
@@ -192,3 +272,5 @@ var wizard = {
   }
 
 }
+
+window.wizard = wizard;

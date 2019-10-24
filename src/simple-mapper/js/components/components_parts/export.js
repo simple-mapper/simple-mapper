@@ -25,7 +25,6 @@ var export_ = {
     };
 
     let dataStr = JSON.stringify(exportData);
-    //let dataUri = 'data:application/json;charset=utf-8,'+ encodeURIComponent(dataStr);
 
     var dataStrEncode = encodeURIComponent(dataStr);
 
@@ -57,8 +56,6 @@ var export_ = {
       filters.fun = new Function("lines", "source_points", "dest_points", `${dataJson.filter} \n  return [lines, source_points, dest_points];`);
 
       export_.data = dataJson;
-
-      // point_styles_model = dataJson.styles;
     }
 
   },
@@ -95,3 +92,5 @@ var export_ = {
   },
 
 }
+
+window.export_ = export_;

@@ -41,7 +41,6 @@ var label_utils = {
     document.getElementById("popup-content").innerHTML = text;
     var template = document.getElementById("smartLabel_template").innerHTML;
     var compiledTemplate = Handlebars.compile(template);
-    console.log(label_utils.objIndex);
     var html = compiledTemplate(label_utils.objIndex);
     document.getElementById("popup-content").innerHTML = html;
 
@@ -68,8 +67,6 @@ var label_utils = {
 
     var indexObj = {};
     var id = "";
-
-    //console.log(source_points);
 
     for(var i = 0; i < source_points.length; i++){
       if(source_points[i].show == true){
@@ -184,18 +181,9 @@ var label_utils = {
 
     map.obj.on('singleclick', function(evt) {
       var coordinate = evt.coordinate;
-      //console.log(evt.coordinate);
-      //var hdms = ol.coordinate.toStringHDMS(ol.proj.toLonLat(coordinate));
-
-
       var hdms = ol.proj.toLonLat(coordinate);
       var point = label_utils.selectedPoint(hdms);
-
-      //console.log(point);
-
       if(point.arrayVal != undefined){
-        // label_utils.content.innerHTML = '<p>You clicked here:</p><code>' + `${point.lng}, ${point.lat}` +
-        // '</code>';
 
         label_utils.objIndex = point;
         label_utils.objIndex.header = point.arrayVal[0].obj;
@@ -206,7 +194,6 @@ var label_utils = {
         map.overlay.setPosition(ol.proj.fromLonLat([point.lng, point.lat]));
       }
     });
-    ////console.log("ok");
 
   },
 
@@ -240,3 +227,5 @@ var label_utils = {
   }
 
 }
+
+window.label_utils = label_utils;

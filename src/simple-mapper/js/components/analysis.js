@@ -71,7 +71,6 @@ var analysis = {
 
       var column = analysis_model.init.gradient_column;
       var indexName =   upload.data.header[column].name;
-      //Source source_points
 
       source_points.sort((a, b) => (parseFloat(a.obj[indexName]) > parseFloat(b.obj[indexName])) ? 1 : -1);
       dest_points.sort((a, b) => (parseFloat(a.obj[indexName]) > parseFloat(b.obj[indexName])) ? 1 : -1);
@@ -132,3 +131,5 @@ var analysis = {
 
   }
 }
+
+window.analysis = analysis;

@@ -14,10 +14,6 @@ var analysis_utils = {
     return header;
   }
 
-
-
-
-
-
-
 }
+
+window.analysis_utils = analysis_utils;

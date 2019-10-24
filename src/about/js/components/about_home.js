@@ -30,14 +30,14 @@ var about_home = {
     <div class = "about_container">
     <div class="pure-g">
     <div class="pure-u-1-1 pure-u-lg-1-2">
-    <img class = "about_img" src="./about/media/icon.png" alt="Simple-Mapper" height="150em">
+    <img class = "about_img" src="https://www.simple-mapper.com/about/media/icon.png" alt="Simple-Mapper" height="150em">
     <p class = "about_p"><i>Simple-Mapper</i> is an <a href = "https://github.com/simple-mapper/simple-mapper/blob/master/LICENSE">open-source</a> project focused on creating a simple mapping experience to allow for quick visionalizations.</p>
     <p class = "about_p">Other tools set out to be the end all be all, this tool is not that.</p>
     <p class = "about_p">The driving vision is to create a light weight, interactive mapping experience, to provide fast editability and shareability.</p>
     <p class = "about_p">Check out the <a href="https://github.com/simple-mapper/simple-mapper">Github</a></p>
     </div>
     <div class="pure-u-1-1 pure-u-lg-1-2">
-    <img class = "about_img" src="./about/media/example_screenshot.png" alt="Simple-Mapper" height="auto" width="100%">
+    <img class = "about_img" src="https://www.simple-mapper.com/about/media/example_screenshot.png" alt="Simple-Mapper" height="auto" width="100%">
     </div>
     </div>
     <hr class = "break"></hr>
@@ -125,3 +125,5 @@ var about_home = {
   }
 
 }
+
+window.about_home = about_home;

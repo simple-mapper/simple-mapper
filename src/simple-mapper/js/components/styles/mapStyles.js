@@ -41,7 +41,6 @@ var mapStyles = {
   },
 
   citiesMapping: function(feature){
-    //console.log('Check you get the property', feature);
     return [new ol.style.Style({
       image: (map.obj.getView().getZoom() > 6 && feature.values_.POP_2010 > 500000) || (map.obj.getView().getZoom() > 6 && feature.values_.POP_2010 > 100000)  || (map.obj.getView().getZoom() > 8 && feature.values_.POP_2010 > 70000) || (map.obj.getView().getZoom() > 10 && feature.values_.POP_2010 > 5000)  || (map.obj.getView().getZoom() > 11) ? new ol.style.Circle({
         radius: 3,

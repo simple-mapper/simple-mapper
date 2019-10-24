@@ -11,3 +11,5 @@ var wizard_model = {
   },
 
 }
+
+window.wizard_model = wizard_model;

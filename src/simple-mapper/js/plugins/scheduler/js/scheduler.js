@@ -1,9 +1,22 @@
 var scheduler = {
   gen: function(){
-    scheduler_render.scheduler();
+    scheduler.init();
   },
 
-  init: function(text){
+  init: function(){
+
+    var text = `<script id="scheduler_plugins_template" type="text/x-handlebars-template">
+    <h4>Scheduler</h4>
+    <button id = "scheduler_run">Run</button>
+    <button id = "scheduler_stop">Stop</button>
+    <button id = "scheduler_keepRunning">Non-Continuous</button>
+    <br>
+    <br>
+    <button id = "scheduler_previous">&laquo; Previous</button>
+    <button id = "scheduler_next">Next &raquo;</button>
+    <p id = "scheduler_error" style="max-width:350px"></p>
+    </script>`
+
     scheduler.render(text);
   },
 
@@ -30,3 +43,5 @@ var scheduler = {
   },
 
 }
+
+window.scheduler = scheduler;

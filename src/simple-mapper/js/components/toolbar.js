@@ -1,9 +1,27 @@
+
 var toolbar = {
   gen: function(){
-    render.toolbar();
+    toolbar.init();
   },
 
-  init: function(text){
+  init: function(){
+
+    var text = `<script id="toolbar_template" type="text/x-handlebars-template">
+    <div class = "toolbar_body simple_round">
+    <button style = "font-size: 70%; float: right;" id = "toolbar_hide">Hide</button>
+    <h2 class="toolbar_header hover_cursor">Toolbar</h2>
+    <hr class = "hr-pad">
+    <ul>
+    <li style="display: inline-block"><a href="#" class="hover_cursor toolbar_legend" id = "toolbar_upload">Upload</a></li>
+    <li style="display: inline-block"><a href="#" class="hover_cursor toolbar_legend" id = "toolbar_filters">Filters</a></li>
+    <li style="display: inline-block"><a href="#" class="hover_cursor toolbar_legend" id = "toolbar_plugins">Plugins</a></li>
+    <li style="display: inline-block"><a href="#" class="hover_cursor toolbar_legend" id = "toolbar_about">About</a></li>
+    </ul>
+    <pre id="log"></pre>
+    <div id = "toolbar_body_div"></div>
+    </div>
+    </script>`
+
     toolbar.render(text);
   },
 
@@ -44,3 +62,5 @@ var toolbar = {
   },
 
 }
+
+window.toolbar = toolbar;

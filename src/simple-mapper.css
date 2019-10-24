@@ -1,0 +1,14 @@
+@import './simple-mapper/css/vendor/ol.css';
+@import './simple-mapper/css/vendor/codemirror.css';
+@import './simple-mapper/css/vendor/pure-min.css';
+@import './simple-mapper/css/vendor/pure-min-grid.css';
+@import './simple-mapper/css/pages/index.css';
+@import './simple-mapper/css/components/toolbar.css';
+@import './simple-mapper/css/components/filter.css';
+@import './simple-mapper/css/components/legend.css';
+@import './simple-mapper/css/components/wizard.css';
+@import './simple-mapper/css/components/analysis.css';
+@import './simple-mapper/css/components/ol-popup.css';
+@import './simple-mapper/css/components/form.css';
+
+@import './about/css/about.css';

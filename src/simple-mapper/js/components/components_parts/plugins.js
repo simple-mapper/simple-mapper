@@ -1,9 +1,18 @@
 var plugins = {
   gen: function(){
-    render.plugins();
+    plugins.init();
   },
 
-  init: function(text){
+  init: function(){
+
+    var text = `<script id="plugins_template" type="text/x-handlebars-template">
+    <div class = "_container" style = "margin-right: 5em;">
+    <h4>Plugins List:</h4>
+    <div id = "plugins_body_div"></div>
+    </div>
+    </script>
+    `
+
     plugins.render(text);
   },
 
@@ -25,3 +34,5 @@ var plugins = {
 
 
 }
+
+window.plugins = plugins;

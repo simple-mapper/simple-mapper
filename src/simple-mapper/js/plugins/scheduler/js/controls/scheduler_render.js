@@ -17,3 +17,5 @@ var scheduler_render = {
 
 
 }
+
+window.scheduler_render = scheduler_render;

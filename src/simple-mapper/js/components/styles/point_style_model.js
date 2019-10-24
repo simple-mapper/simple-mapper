@@ -193,3 +193,5 @@ var point_styles_model = {
 }
 
 point_styles_model.fun.colors = ["#ff0000", "#0000ff", "#3cb371", "#ee82ee", "#ffa500", "#6a5acd"];
+
+window.point_styles_model = point_styles_model;

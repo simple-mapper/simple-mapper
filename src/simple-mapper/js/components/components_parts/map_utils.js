@@ -7,7 +7,6 @@ var map_utils = {
     });
 
     feature.setStyle(point_styles.changingStyle(point));
-    //console.log(point, feature);
     map.vectorSource.addFeature(feature);
 
   },
@@ -56,3 +55,5 @@ var map_utils = {
   }
 
 }
+
+window.map_utils = map_utils;

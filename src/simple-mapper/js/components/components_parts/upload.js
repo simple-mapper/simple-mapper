@@ -3,10 +3,26 @@ var upload = {
   data: {},
 
   gen: function(){
-    render.upload();
+    upload.init();
   },
 
-  init: function(text){
+  init: function(){
+
+    var text = `<script id="upload_template" type="text/x-handlebars-template">
+    <div class = "_container">
+    <form>
+    <input type="file" name="inputFile" id = "inputFile"></input>
+    <br>
+    </br>
+    <button id = 'inputSubmit' type="submit" value="Submit">Upload</button>
+    <button id="exportSubmit" type="submit" value="Submit">Export</button>
+    <button id = 'exampleSubmit' type="submit" value="Submit" style = "background-color: #008CBA;">Example</button>
+    </form>
+    <br>
+    <div id = "toolbar_controls"></div>
+    </div>
+    </script>`
+
     upload.render(text);
   },
 
@@ -26,10 +42,6 @@ var upload = {
     upload.setUploadActions();
     export_.gen();
     toolbar_controls.gen();
-
-    // upload.data = {values: [["34.374", "-80.0734", "33.749", "-84.388", "Example"]]};
-    // upload.confirmUploadData();
-
   },
 
   setUploadActions: function(){
@@ -45,8 +57,7 @@ var upload = {
       else {
         wizard.gen();
       }
-      //upload.confirmUploadData();
-      //document.getElementById("inputFile").value = null;
+
     });
     document.getElementById('exampleSubmit').addEventListener("click", (event) => {
       event.preventDefault();
@@ -59,8 +70,7 @@ var upload = {
     ]};
     point_styles_model.fun.clear();
     wizard.gen();
-    //analysis.gen();
-    //upload.confirmUploadData();
+
   });
 },
 
@@ -390,3 +400,5 @@ setObj: function(headers, data){
   return obj;
 },
 }
+
+window.upload = upload;

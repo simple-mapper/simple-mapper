@@ -1,9 +1,17 @@
 var plugins_controls = {
   gen: function(){
-    render.plugins_controls();
+    plugins_controls.init();
   },
 
-  init: function(text){
+  init: function(){
+
+    var text = `<script id="plugins_controls_template" type="text/x-handlebars-template">
+    {{#each confirmed}}
+    <div id = "{{div}}"></div>
+    <hr>
+    {{/each}}
+    </script>`
+
     plugins_controls.render(text);
   },
 
@@ -29,3 +37,5 @@ var plugins_controls = {
 
 
 }
+
+window.plugins_controls = plugins_controls;

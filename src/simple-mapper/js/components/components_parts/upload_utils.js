@@ -1,3 +1,4 @@
+
 var upload_utils = {
   defaultDef: {
     sourceLat: 1,
@@ -31,3 +32,5 @@ var upload_utils = {
 
   }
 }
+
+window.upload_utils = upload_utils;

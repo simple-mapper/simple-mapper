@@ -8,6 +8,13 @@
   overflow-y: auto;
 }
 
+.simple_round {
+  padding: 10px 10px 10px 10px;
+  background-color: white;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
 .hover_cursor {
   cursor: pointer;
 }

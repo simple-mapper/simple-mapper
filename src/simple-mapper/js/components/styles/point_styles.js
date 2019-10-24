@@ -9,7 +9,6 @@ var point_styles = {
       text: new ol.style.Text({
         font: `${point.font_size}px Arial`,
         fill: new ol.style.Fill({ color: [0, 0, 0, 1] }),
-        //text: map.obj.getView().getZoom() > 9 ? point.label : '',
         text: point.label,
         offsetY: point.labelOffsetY,
       }),
@@ -19,3 +18,5 @@ var point_styles = {
     return [style]
   },
 }
+
+window.point_styles = point_styles;

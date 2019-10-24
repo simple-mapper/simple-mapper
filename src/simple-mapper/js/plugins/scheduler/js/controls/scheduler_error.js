@@ -9,3 +9,5 @@ var scheduler_error = {
     }
   }
 }
+
+window.scheduler_error = scheduler_error;
